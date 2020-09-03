@@ -9,8 +9,6 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import javax.ws.rs.core.MultivaluedMap;
-
 import org.csstudio.security.preferences.SecurePreferences;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.preferences.IPreferencesService;
@@ -267,12 +265,6 @@ public class OlogClientFromPreferences implements OlogClient {
     @Override
     public void delete(String fileName, Long logId) throws OlogException {
         client.delete(fileName, logId);
-    }
-
-    @Override
-    public Collection<Log> findLogs(MultivaluedMap<String, String> map)
-            throws OlogException {
-        return client.findLogs(map);
     }
 
     @Override
