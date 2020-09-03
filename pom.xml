@@ -41,6 +41,8 @@
     <eclipse-update-site>${eclipse.mirror.url}/eclipse/updates/4.17milestones</eclipse-update-site>
     <efx-site>${eclipse.mirror.url}/efxclipse/runtime-released/3.5.0/site</efx-site>
     <openjfx-site>http://downloads.efxclipse.bestsolution.at/p2-repos/openjfx-11/repository</openjfx-site>
+    <nebula-site>http://download.eclipse.org/nebula/releases/2.4.2</nebula-site>
+
 
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,6 +91,12 @@
     <repository>
       <id>openjfx</id>
       <url>${openjfx-site}</url>
+      <layout>p2</layout>
+    </repository>
+    </repository>
+      <repository>
+      <id>nebula</id>
+      <url>${nebula-site}</url>
       <layout>p2</layout>
     </repository>
   </repositories>
