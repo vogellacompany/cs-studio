@@ -31,7 +31,6 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.UriBuilder;
 
 import com.sun.jersey.api.client.Client;
@@ -886,12 +885,6 @@ public class OlogClientImpl implements OlogClient {
 
 	@Override
 	public Collection<Log> findLogs(Map<String, String> map)
-			throws OlogException {
-		return wrappedSubmit(new FindLogs(map));
-	}
-
-	@Override
-	public Collection<Log> findLogs(MultivaluedMap<String, String> map)
 			throws OlogException {
 		return wrappedSubmit(new FindLogs(map));
 	}

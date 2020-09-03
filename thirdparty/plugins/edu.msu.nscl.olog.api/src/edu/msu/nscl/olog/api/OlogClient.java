@@ -365,18 +365,6 @@ public interface OlogClient {
 			throws OlogException;
 
 	/**
-	 * Multivalued map used to search for a key with multiple values. e.g.
-	 * logbook a=1 or logbook a=2
-	 * 
-	 * @param map
-	 *            Multivalue map for searching a key with multiple values
-	 * @return collection of Log objects
-	 * @throws OlogException
-	 */
-	public Collection<Log> findLogs(MultivaluedMap<String, String> map)
-			throws OlogException;
-
-	/**
 	 * Remove {tag} from all logs
 	 * 
 	 * @param tag
